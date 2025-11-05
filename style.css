@@ -1,3 +1,7 @@
+#kontak p {
+  max-width: 720px;
+  margin: 6px auto;
+}
 /* === RESET DAN DASAR === */
 * {
   margin: 0;
@@ -10,41 +14,10 @@ body {
   background-color: #fafafa;
   color: #222;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 /* === HEADER === */
-header {
-  background-color: #1f1f1f;
-  color: #fff;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-header h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #d4af37; /* Warna emas elegan */
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #d4af37;
-}
+/* (Dipertahankan versi sticky header di bagian NAVBAR STICKY di bawah) */
 
 /* === HERO SECTION === */
 #hero {
@@ -56,9 +29,11 @@ nav a:hover {
 }
 
 #hero h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
 }
 
 #hero p {
@@ -66,6 +41,7 @@ nav a:hover {
   max-width: 600px;
   margin: 0 auto;
   color: #eaeaea;
+  line-height: 1.8;
 }
 
 /* === LAYANAN === */
@@ -157,7 +133,7 @@ footer {
   }
 
   #hero h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   #layanan ul {
@@ -183,17 +159,19 @@ footer {
   display: inline-block;
   background-color: #d4af37;
   color: #1f1f1f;
-  padding: 12px 30px;
+  padding: 14px 34px;
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
   margin-top: 25px;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.28);
 }
 
 .btn-cta:hover {
   background-color: #b6932b;
   transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.35);
 }
 
 /* === ANIMASI SCROLL === */
@@ -341,6 +319,7 @@ header {
   top: 0;
   background-color: rgba(31, 31, 31, 0.95);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -391,4 +370,41 @@ nav a:hover {
 /* === SCROLL HALUS === */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* === MOBILE NAV === */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 6%;
+  }
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  header.open nav {
+    display: flex;
+  }
+  nav a {
+    margin: 0;
+    padding: 10px 0;
+  }
 }
