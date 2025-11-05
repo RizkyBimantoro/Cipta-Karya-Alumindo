@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://https://rizkybimantoro.github.io/Cipta-Karya-Alumindo//sitemap.xml
