@@ -164,3 +164,56 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* === LOGO & HEADER === */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* === CTA BUTTON === */
+.btn-cta {
+  display: inline-block;
+  background-color: #d4af37;
+  color: #1f1f1f;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #b6932b;
+  transform: translateY(-2px);
+}
+
+/* === ANIMASI SCROLL === */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === FOOTER TAMBAHAN === */
+footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 1px solid #333;
+}
