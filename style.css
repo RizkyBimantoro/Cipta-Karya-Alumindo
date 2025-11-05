@@ -335,3 +335,60 @@ footer {
   margin-bottom: 8px;
   color: #d4af37;
 }
+/* === NAVBAR STICKY === */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(31, 31, 31, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background-color: rgba(15, 15, 15, 0.98);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #d4af37;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d4af37;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+/* === SCROLL HALUS === */
+html {
+  scroll-behavior: smooth;
+}
