@@ -268,3 +268,70 @@ footer {
   background-color: #b6932b;
   transform: translateY(-2px);
 }
+/* === GALERI === */
+#galeri {
+  padding: 80px 10%;
+  background-color: #f8f8f8;
+  color: #222;
+  text-align: center;
+}
+
+#galeri h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#galeri .subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.galeri-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.galeri-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.galeri-item:hover img {
+  transform: scale(1.08);
+}
+
+.galeri-item .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  padding: 20px;
+  text-align: left;
+}
+
+.galeri-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.galeri-item .overlay h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #d4af37;
+}
