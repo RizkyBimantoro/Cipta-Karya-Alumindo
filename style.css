@@ -1,15 +1,166 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff6e5;
+/* ====== STYLE UTAMA CIPTA KARYA ALUMINDO ====== */
+
+/* Import font modern */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --warna-utama: #d4a017;        /* Emas elegan */
+  --warna-sekunder: #f8f4ec;     /* Krem lembut */
+  --warna-teks: #333;            /* Abu gelap untuk teks */
+  --warna-putih: #ffffff;
 }
 
-h1 {
-  color: #f0b429;
-  text-align: center;
-  padding: 20px;
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-p {
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--warna-sekunder);
+  color: var(--warna-teks);
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: var(--warna-putih);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  color: var(--warna-utama);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+nav a {
+  color: var(--warna-teks);
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--warna-utama);
+}
+
+/* ===== HERO SECTION ===== */
+#hero {
   text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom right, #fff, #f4f1ea);
+}
+
+#hero h2 {
+  font-size: 2rem;
+  color: var(--warna-utama);
+  margin-bottom: 1rem;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== LAYANAN SECTION ===== */
+#layanan {
+  padding: 4rem 2rem;
+  background-color: var(--warna-putih);
+  text-align: center;
+}
+
+#layanan h3 {
+  font-size: 1.8rem;
+  color: var(--warna-utama);
+  margin-bottom: 2rem;
+}
+
+#layanan ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+#layanan li {
+  background-color: var(--warna-sekunder);
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  width: 250px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#layanan li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ===== KONTAK SECTION ===== */
+#kontak {
+  background-color: var(--warna-sekunder);
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#kontak h3 {
+  font-size: 1.8rem;
+  color: var(--warna-utama);
+  margin-bottom: 1.5rem;
+}
+
+#kontak a {
+  color: var(--warna-utama);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#kontak a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--warna-putih);
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav {
+    margin-top: 0.5rem;
+  }
+
+  nav a {
+    margin: 0 1rem;
+  }
+
+  #layanan ul {
+    flex-direction: column;
+    align-items: center;
+  }
 }
