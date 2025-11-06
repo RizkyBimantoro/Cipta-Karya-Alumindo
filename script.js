@@ -96,4 +96,82 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'ArrowRight') next();
     if (e.key === 'ArrowLeft') prev();
   });
+
+  // === COUNTER ANIMATION FOR STATS ===
+  const counters = document.querySelectorAll('.stat-number');
+  let animated = false;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = parseInt(counter.getAttribute('data-target'));
+      const duration = 2000;
+      const increment = target / (duration / 16);
+      let current = 0;
+
+      const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+          counter.textContent = Math.ceil(current);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = target;
+        }
+      };
+
+      updateCounter();
+    });
+  };
+
+  const statsSection = document.getElementById('stats');
+  if (statsSection) {
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          animateCounters();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    statsObserver.observe(statsSection);
+  }
+
+  // === FAQ ACCORDION ===
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Close other items
+      const isActive = item.classList.contains('active');
+      
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+      });
+      
+      // Toggle current item
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+  // === WHATSAPP FLOAT BUTTON VISIBILITY ===
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener('scroll', () => {
+    if (whatsappFloat) {
+      // Show button after scrolling down 300px
+      if (window.scrollY > 300) {
+        whatsappFloat.style.opacity = '1';
+        whatsappFloat.style.pointerEvents = 'auto';
+      } else {
+        whatsappFloat.style.opacity = '0';
+        whatsappFloat.style.pointerEvents = 'none';
+      }
+    }
+    lastScrollY = window.scrollY;
+  });
 });

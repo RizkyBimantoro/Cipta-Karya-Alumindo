@@ -1,0 +1,24 @@
+{
+  "name": "cipta-karya-alumindo",
+  "version": "1.0.0",
+  "description": "Website Cipta Karya Alumindo - Jasa Desain Interior dan Aluminium",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview --port 5173"
+  },
+  "keywords": [
+    "interior",
+    "aluminium",
+    "design",
+    "jakarta"
+  ],
+  "author": "Cipta Karya Alumindo",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

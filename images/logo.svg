@@ -1,0 +1,25 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="240" fill="#0f172a" stroke="#f59e0b" stroke-width="8"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon: Window/Frame representing Aluminium -->
+  <rect x="140" y="140" width="232" height="232" fill="none" stroke="url(#goldGradient)" stroke-width="12" rx="8"/>
+  <line x1="256" y1="140" x2="256" y2="372" stroke="url(#goldGradient)" stroke-width="8"/>
+  <line x1="140" y1="256" x2="372" y2="256" stroke="url(#goldGradient)" stroke-width="8"/>
+  
+  <!-- Company Initials -->
+  <text x="256" y="440" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+        fill="url(#goldGradient)" text-anchor="middle">CKA</text>
+  
+  <!-- Small text -->
+  <text x="256" y="470" font-family="Arial, sans-serif" font-size="20" 
+        fill="#f59e0b" text-anchor="middle">ALUMINDO</text>
+</svg>
