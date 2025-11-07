@@ -103,8 +103,8 @@ cipta-karya-alumindo/
 ## 📞 Kontak
 
 - **Email:** ciptaalumindo@gmail.com
-- **Telepon:** +62 812 3456 7890
-- **Alamat:** Jl. Arjuna Raya No.88, Jakarta
+- **Telepon:** +6287788737153
+- **Alamat:** Kp. Babakan, Curug, Kab. Tangerang 15810
 
 ---
 
